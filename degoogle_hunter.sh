@@ -16,5 +16,5 @@ dorks["# Subdomains"]="site:*.$1"
 dorks["# Sub-subdomains"]="site:*.*.$1"
 
 for c in "${!dorks[@]}"; do
-    printf "\n\e[32m"%s"\e[0m\n" "$c" && degoogle.py -j "${dorks[$c]}"
+    printf "\n\e[32m"%s"\e[0m\n" "$c" && python3 degoogle.py -j "${dorks[$c]}"
 done

@@ -25,6 +25,9 @@ dorks["# Linkedin employees"]="site:linkedin.com employees $1"
 dorks["# Wordpress files"]="site:$1 inurl:wp-content | inurl:wp-includes"
 dorks["# Subdomains"]="site:*.$1"
 dorks["# Sub-subdomains"]="site:*.*.$1"
+dorks["# AWS S3"]="site:.s3.amazonaws.com | site:http://storage.googleapis.com | site:http://amazonaws.com \"$target\""
+dorks["# Traefik"]="intitle:traefik inurl:8080/dashboard \"$target\""
+dorks["# Jenkins"]="intitle:\"Dashboard [Jenkins]\" \"$target\""
 
 for c in "${!dorks[@]}"; do
     printf "\n\e[32m"%s"\e[0m\n" "$c" && python3 degoogle.py -j "${dorks[$c]}"

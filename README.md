@@ -6,6 +6,15 @@ You can add your own dorks following the same scheme included, just remember to 
 
 ```dorks["description"]="dork"```
 
+# How to
+
+```
+git clone https://github.com/six2dez/degoogle_hunter
+cd degoogle_hunter 
+./degoogle_hunter.sh target.com
+```
+
+
 First release contains these dorks, to serve as an example:
 
 ```
@@ -20,6 +29,5 @@ dorks["# Wordpress files"]="site:$1 inurl:wp-content | inurl:wp-includes"
 dorks["# Subdomains"]="site:*.$1"
 dorks["# Sub-subdomains"]="site:*.*.$1"
 ```
-
 
 ![](https://github.com/six2dez/degoogle_hunter/blob/master/2020-12-13%2001_56_29-Clipboard.png)

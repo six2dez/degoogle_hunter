@@ -4,11 +4,12 @@ target=${hostname%%.*}
 
 declare -A dorks
 
-dorks["# Code share sites"]="site:http://ideone.com | site:http://codebeautify.org | site:http://codeshare.io | site:http://codepen.io | site:http://repl.it | site:http://jsfiddle.net \"$target\""
+dorks["# Other 3rd parties sites"]="site:gitter.im | site:replt.it | site:libraries.io | site:npm.runkit.com | site:npmjs.com | site:scribd.com | site:gitlab.com | site:bitbucket.org \"$target\""
+dorks["# Code share sites"]="site:sharecode.io | site:controlc.com | site:codepad.co |site:ideone.com | site:codebeautify.org | site:codeshare.io | site:codepen.io | site:repl.it | site:jsfiddle.net \"$target\""
 dorks["# GitLab/GitHub/Bitbucket"]="site:github.com | site:gitlab.com | site:bitbucket.org \"$target\""
 dorks["# Stackoverflow"]="site:stackoverflow.com \"$1\""
-dorks["# Project management sites"]="site:http://trello.com | site:*.atlassian.net \"$target\""
-dorks["# Pastebin-like sites"]="site:http://justpaste.it | site:http://pastebin.com \"$target\""
+dorks["# Project management sites"]="site:trello.com | site:*.atlassian.net \"$target\""
+dorks["# Pastebin-like sites"]="site:justpaste.it | site:heypasteit.com | site:pastebin.com \"$target\""
 dorks["# Config files"]="site:$1 ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:env | ext:ini"
 dorks["# Database files"]="site:$1 ext:sql | ext:dbf | ext:mdb"
 dorks["# Backup files"]="site:$1 ext:bkf | ext:bkp | ext:bak | ext:old | ext:backup"
@@ -20,12 +21,11 @@ dorks["# PHP errors"]="site:$1 \"PHP Parse error\" | \"PHP Warning\" | \"PHP Err
 dorks["# Login pages"]="site:$1 inurl:signup | inurl:register | intitle:Signup"
 dorks["# Open redirects"]="site:$1 inurl:redir | inurl:url | inurl:redirect | inurl:return | inurl:src=http | inurl:r=http"
 dorks["# Apache Struts RCE"]="site:$1 ext:action | ext:struts | ext:do"
-dorks["# Search in pastebin"]="site:pastebin.com $1"
 dorks["# Linkedin employees"]="site:linkedin.com employees $1"
 dorks["# Wordpress files"]="site:$1 inurl:wp-content | inurl:wp-includes"
 dorks["# Subdomains"]="site:*.$1"
 dorks["# Sub-subdomains"]="site:*.*.$1"
-dorks["# AWS S3"]="site:.s3.amazonaws.com | site:http://storage.googleapis.com | site:http://amazonaws.com \"$target\""
+dorks["# Cloud buckets S3/GCP"]="site:.s3.amazonaws.com | site:storage.googleapis.com | site:amazonaws.com \"$target\""
 dorks["# Traefik"]="intitle:traefik inurl:8080/dashboard \"$target\""
 dorks["# Jenkins"]="intitle:\"Dashboard [Jenkins]\" \"$target\""
 

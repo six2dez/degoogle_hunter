@@ -4,8 +4,8 @@ target=${hostname%%.*}
 
 declare -A dorks
 
-dorks["# Other 3rd parties sites"]="site:gitter.im | site:replt.it | site:libraries.io | site:npm.runkit.com | site:npmjs.com | site:scribd.com | site:gitlab.com | site:bitbucket.org \"$target\""
-dorks["# Code share sites"]="site:sharecode.io | site:controlc.com | site:codepad.co |site:ideone.com | site:codebeautify.org | site:codeshare.io | site:codepen.io | site:repl.it | site:jsfiddle.net \"$target\""
+dorks["# Other 3rd parties sites"]="site:gitter.im | site:papaly.com | site:productforums.google.com | site:coggle.it | site:replt.it | site:ycombinator.com | site:libraries.io | site:npm.runkit.com | site:npmjs.com | site:scribd.com \"$target\""
+dorks["# Code share sites"]="site:sharecode.io | site:controlc.com | site:codepad.co |site:ideone.com | site:codebeautify.org | site:jsdelivr.com | site:codeshare.io | site:codepen.io | site:repl.it | site:jsfiddle.net \"$target\""
 dorks["# GitLab/GitHub/Bitbucket"]="site:github.com | site:gitlab.com | site:bitbucket.org \"$target\""
 dorks["# Stackoverflow"]="site:stackoverflow.com \"$1\""
 dorks["# Project management sites"]="site:trello.com | site:*.atlassian.net \"$target\""

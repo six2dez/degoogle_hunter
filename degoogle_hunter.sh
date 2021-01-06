@@ -30,5 +30,5 @@ dorks["# Traefik (https://www.google.com/search?q=intitle%3Atraefik%20inurl%3A80
 dorks["# Jenkins (https://www.google.com/search?q=intitle%3A%5C%22Dashboard%20%5BJenkins%5D%5C%22%20%22$target%22)"]="intitle:\"Dashboard [Jenkins]\" \"$target\""
 
 for c in "${!dorks[@]}"; do
-    printf "\n\e[32m"%s"\e[0m\n" "$c" && python3 /home/gmvses/Escritorio/tools/degoogle_hunter/degoogle.py -j "${dorks[$c]}"
+    printf "\n\e[32m"%s"\e[0m\n" "$c" && python3 degoogle.py -j "${dorks[$c]}"
 done

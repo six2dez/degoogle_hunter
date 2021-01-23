@@ -2,6 +2,8 @@
 domain=$1
 target=${domain%%.*}
 
+DEGOOGLEPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
 declare -A dorks
 
 dorks["# Other 3rd parties sites (https://www.google.com/search?q=site%3Agitter.im%20%7C%20site%3Apapaly.com%20%7C%20site%3Aproductforums.google.com%20%7C%20site%3Acoggle.it%20%7C%20site%3Areplt.it%20%7C%20site%3Aycombinator.com%20%7C%20site%3Alibraries.io%20%7C%20site%3Anpm.runkit.com%20%7C%20site%3Anpmjs.com%20%7C%20site%3Ascribd.com%20%22$target%22)"]="site:gitter.im | site:papaly.com | site:productforums.google.com | site:coggle.it | site:replt.it | site:ycombinator.com | site:libraries.io | site:npm.runkit.com | site:npmjs.com | site:scribd.com \"$target\""
@@ -30,5 +32,5 @@ dorks["# Traefik (https://www.google.com/search?q=intitle%3Atraefik%20inurl%3A80
 dorks["# Jenkins (https://www.google.com/search?q=intitle%3A%5C%22Dashboard%20%5BJenkins%5D%5C%22%20%22$target%22)"]="intitle:\"Dashboard [Jenkins]\" \"$target\""
 
 for c in "${!dorks[@]}"; do
-    printf "\n\e[32m"%s"\e[0m\n" "$c" && python3 degoogle.py -j "${dorks[$c]}"
+    printf "\n\e[32m"%s"\e[0m\n" "$c" && python3 $DEGOOGLEPATH/degoogle.py -j "${dorks[$c]}"
 done

@@ -32,6 +32,3 @@ dorks["# Sub-subdomains"]="site:*.*.$1"
 
 ![](https://github.com/six2dez/degoogle_hunter/blob/master/2020-12-13%2001_56_29-Clipboard.png)
 
-You can support this work buying me a coffee:
-
-[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png">](https://www.buymeacoffee.com/six2dez)
